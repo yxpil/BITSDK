@@ -1,0 +1,33 @@
+{
+  "name": "bit-sdk-js",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for the BIT HTTP API (zero dependencies, Node >= 18)",
+  "type": "module",
+  "main": "./index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "default": "./index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "index.cjs",
+    "core.cjs",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "bit",
+    "mcp",
+    "openai",
+    "sdk"
+  ]
+}
