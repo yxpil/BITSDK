@@ -8,4 +8,10 @@
     <RootNamespace>BitSdk</RootNamespace>
   </PropertyGroup>
 
+  <!-- test/ 与 examples/ 是独立项目，避免主项目 glob 吸进同一编译单元 -->
+  <ItemGroup>
+    <Compile Remove="test/**/*.cs" />
+    <Compile Remove="examples/**/*.cs" />
+  </ItemGroup>
+
 </Project>
