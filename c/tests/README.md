@@ -1,4 +1,12 @@
-# BITSDK (C) 离线测试说明
+# BITSDK 测试说明
+- 测试完成：是（2026-10-04）
+- 测试日期：2026-10-04
+- 测试内容：单元覆盖客户端生命周期/NULL 安全与 `bit_error_message()` 三类错误提取规则；集成覆盖不可信 JSON-RPC / chat-completions 入口在发请求前被拒绝并置 last_error；注入测试通过 stub 捕获真实请求 URL，验证 `tool_id`/`session_id` 中的 `../` 路径穿越被原样拼进路径（客户端不编码，防护在服务端）；本 SDK 为无状态 HTTP 客户端，无钩子/插件注册机制。
+- 运行命令：`gcc -Wall -Itests/stubinclude -Iinclude -Isrc -Isrc/cjson tests/test_main.c tests/stub_curl.c src/bitsdk.c src/cjson/cJSON.c -o build/test_unit.exe && ./build/test_unit.exe`
+- 测试框架：自建 C assert harness（printf 断言计数）+ 测试专用 stub libcurl
+- 模型：豆包（Doubao）生成
+
+---
 
 本目录 `c/tests/` 是**离线单元/集成测试** harness，不需要 libcurl、不需要网络、不需要假服务器。
 与既有 `c/test/test_smoke.c`（需启动 `test/fake_bit_server.js` 真发 HTTP）互补。
