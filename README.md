@@ -152,3 +152,15 @@ node test/fake_bit_server.js   # fake BIT on 127.0.0.1:9803 (key: bit_test_key_1
 ## License
 
 Apache-2.0
+
+---
+
+<div align="center">
+
+<a href="https://github.com/yxpil/BITSDK">
+  <img width="100%" src="https://alittlecatgirlpanel.yxp.hk/card?repo=yxpil/BITSDK" alt="gh-card · yxpil/BITSDK" />
+</a>
+
+<sub>Powered by <a href="https://alittlecatgirlpanel.yxp.hk"><b>gh-card</b></a> · 粉色手写体 README 仓库名片</sub>
+
+</div>
